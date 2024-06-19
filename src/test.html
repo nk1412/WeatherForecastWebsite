@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Dropdown Example</title>
+  <style>
+    /* Styles for the dropdown symbol and content */
+    .dropdown-symbol {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      background-color: #f9f9f9;
+      padding: 10px;
+      border: 1px solid #ddd;
+      position: absolute;
+      z-index: 1;
+    }
+
+    /* Show the dropdown content when the symbol is clicked */
+    .show-dropdown {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Your other HTML content -->
+
+  <div id="toggleButton" class="dropdown-symbol">⁞</div>
+  <div id="dropdownContent" class="dropdown-content">
+    <!-- Your custom content here -->
+    <a href="test2.html">Go to Page 2</a>
+    <p>Option 2</p>
+    <p>Option 3</p>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.getElementById('toggleButton');
+      const dropdownContent = document.getElementById('dropdownContent');
+
+      // Function to toggle the visibility of the dropdown content
+      function toggleDropdown() {
+        dropdownContent.classList.toggle('show-dropdown');
+      }
+
+      // Add a click event listener to the toggle button
+      toggleButton.addEventListener('click', toggleDropdown);
+    });
+  </script>
+</body>
+</html>

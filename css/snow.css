@@ -1,0 +1,17 @@
+body {
+  background-color: #000;
+}
+
+.snowflake {
+  position: fixed;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 2px;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

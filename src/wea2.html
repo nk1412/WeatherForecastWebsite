@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OpenWeatherMap Forecast</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .forecast-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .dailyForecast, .hourlyForecast {
+      flex-basis: calc(50% - 10px);
+    }
+    .hourlyForecast {
+      max-width: 400px; /* Set a fixed width for the hourly container */
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+    #hourlyChart {
+      width: 100%; /* Set the chart width to 100% of the hourly container */
+    }
+  </style>
+</head>
+<body>
+  <input type="text" placeholder="Please Enter City Name" id="city">
+  <button id="search">Go!</button>
+  <div id="error"></div>
+  
+  <div class="forecast-container">
+    <div class="hourlyForecast">
+      <h2>Hourly Temperature Forecast</h2>
+      <div class="chart-container">
+        <canvas id="hourlyChart" width="400" height="300"></canvas>
+      </div>
+    </div>
+    <div class="dailyForecast" id="dailyForecast">
+      <h2>8-Day Forecast</h2>
+      <div id="daily-container"></div>
+    </div>
+  </div>
+  <script src="wea2.js"></script>
+</body>
+</html>

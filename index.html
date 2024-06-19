@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast</title>
+    <link rel="shortcut icon" href="wea.ico" type="image/x-icon">
+    <link rel="icon" href="/img/wea.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/css/wea.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="/img/wea.jpg" alt="Image Description" width="40" height="40">
+        <h1> Weather Forecast</h1>
+        <input type="text" placeholder="Please Enter City Name" id="city">
+        <button id="search">Go!</button>
+    </header>
+    <div id="makerain"></div>
+    <div class='clouds' id='clouds'>
+        <div class='clouds-1'></div>
+        <div class='clouds-2'></div>
+        <div class='clouds-3'></div>
+    </div>
+    <div class="ball"></div>
+    <div id="foglayer_01" class="fog">
+        <div class="image01"></div>
+        <div class="image02"></div>
+    </div>
+    <div id="foglayer_02" class="fog">
+        <div class="image01"></div>
+        <div class="image02"></div>
+    </div>
+    <div id="foglayer_03" class="fog">
+        <div class="image01"></div>
+        <div class="image02"></div>
+    </div>
+    <div id="error" align="center"></div>
+    <div id="weather-container">
+        <h2 id="cityx"></h2>
+        <div class="rainfall"></div>
+        <div id="temperature"></div>
+        <div id="description"></div>
+        <div id="humidity"></div>
+        <div id="wind-speed"></div>
+    </div>
+
+    <div class="forecast-container">
+        <div class="hourlyForecast" id="hourlyForecast">
+            <div id="hourlyForecastx"></div>
+            <div class="chart-container">
+                <canvas id="hourlyChart" width="600" height="300"></canvas>
+            </div>
+        </div>
+        <div class="dailyForecast" id="dailyForecast">
+            <div id="dailyForecastx" margin-left="70px"></div>
+            <div id="daily-container"></div>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <script src="/js/wea.js"></script>
+</body>
+
+</html>

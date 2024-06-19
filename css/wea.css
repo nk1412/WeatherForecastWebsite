@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e6cece;
+  overflow: hidden;
+}
+
+header {
+  background-color: #ff5722;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+header h1 {
+  margin-right: 50%;
+}
+
+header div {
+  margin-right: 5%;
+}
+
+header input,button {
+  margin-top: 15px;
+  margin-left: 5px;
+  left: 100%;
+}
+
+#weather-container {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+#city {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#search {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#temperature {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#description {
+  font-size: 18px;
+}
+
+#humidity {
+  font-size: 18px;
+}
+
+#wind-speed {
+  font-size: 18px;
+}
+
+.forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 400px;
+  margin-top: 50px;
+}
+
+.dailyForecast, .hourlyForecast {
+  flex-basis: calc(50% - 10px);
+}
+
+.hourlyForecast {
+  margin-left: 75px;
+  max-width: 600px; /* Set a fixed width for the hourly container */
+}
+
+.dailyForecast {
+  margin-right: 75px;
+  max-width: 300px;
+}
+
+#hourlyChart {
+  width: 100%; /* Set the chart width to 100% of the hourly container */
+}

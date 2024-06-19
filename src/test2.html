@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page 2</title>
+</head>
+<body>
+  <h1>Page 2</h1>
+  <!-- Link to perform backward navigation -->
+  <a href="#" onclick="goBack()">Go Back</a>
+
+  <script>
+    function goBack() {
+      // Perform backward navigation
+      window.history.back();
+      // Remove the current entry from the browser's history
+      window.history.refreshState(null, null, window.location.href);
+    }
+
+  </script>
+</body>
+</html>

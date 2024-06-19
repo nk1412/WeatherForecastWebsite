@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.tree-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #87ceeb; /* Set the background color of the scene */
+  overflow: hidden;
+}
+
+.tree {
+  width: 300px; /* Adjust the tree size as needed */
+  height: 400px; /* Adjust the tree size as needed */
+  background: url('https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  animation: sway 5s infinite alternate; /* Adjust the animation duration and other properties as needed */
+}
+
+@keyframes sway {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(5deg); /* Adjust the rotation angle as needed */
+  }
+}
